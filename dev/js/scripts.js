@@ -1,0 +1,3 @@
+(function() {
+	// Scripts are here
+})();

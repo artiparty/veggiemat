@@ -1,0 +1,15 @@
+$default-font: "freight-sans-pro", "Arial", "Helvetica", sans-serif;
+$default-color: #000;
+$link-color--hover: #eb5851;
+
+@custom-media --palm (width < 768px);
+@custom-media --not-palm (width >= 768px);
+@custom-media --lap (768px <= width <= 1024px);
+@custom-media --portable (width <= 1024px);
+@custom-media --desk (width > 1024px);
+
+$column: 80px;
+$gutter: 22px;
+$six-columns: calc($column * 6 + $gutter * 5);
+$flying-button-height: 78px;
+$transition-duration: 0.15s;

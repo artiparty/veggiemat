@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@import "_reset.pcss";
+@import "_vars.pcss";
+/* @import "_mixins.pcss"; */
+
+/* Initial
+----------------------------------------------------------------------------- */
+
+body {
+	background: #fff;
+	color: $default-color;
+	font: 500 18px/24px $default-font;
+}
+a {
+	text-decoration: underline;
+	transition: color $transition-duration;
+
+	&,
+	&:active {
+		color: inherit;
+	}
+	&:hover {
+		color: $link-color--hover;
+	}
+}
+.not-palm {
+	display: none;
+}
+.palm-only {
+	@media (--not-palm) {
+		display: none;
+	}
+}
+
+/* Blocks
+----------------------------------------------------------------------------- */
