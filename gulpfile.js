@@ -154,7 +154,7 @@ gulp.task('revreplace', function() {
 	const manifest = gulp.src(`${project.build}/rev-manifest.json`);
 
 	return gulp
-		.src(project.html.build)
+		.src(`${project.build}/*.html`)
 		.pipe(revReplace({ manifest }))
 		.pipe(gulp.dest(project.build));
 });
