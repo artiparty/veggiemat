@@ -46,7 +46,8 @@
     "test": "gulp lint",
     "fix:css": "stylelint --fix \"**/*.pcss\" && prettier --write \"**/*.pcss\"",
     "fix:js": "eslint --fix . && prettier --write \"**/*.js\"",
-    "fix": "npm run fix:css && npm run fix:js"
+    "fix": "npm run fix:css && npm run fix:js",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
@@ -54,7 +55,7 @@
       "prettier --write",
       "git add"
     ],
-    "*.scss": [
+    "*.pcss": [
       "stylelint --fix",
       "prettier --write",
       "git add"
