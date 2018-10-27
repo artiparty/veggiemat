@@ -139,7 +139,14 @@ gulp.task('copy:js', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('copy', gulp.parallel('copy:images', 'copy:html', 'copy:js'));
+gulp.task('copy:public', function() {
+	return gulp
+		.src('public/**', { since: gulp.lastRun('copy:public') })
+		.pipe(gulp.dest(project.build))
+		.pipe(browserSync.stream());
+});
+
+gulp.task('copy', gulp.parallel('copy:images', 'copy:html', 'copy:js', 'copy:public'));
 
 gulp.task('rev', function() {
 	return gulp
