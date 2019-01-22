@@ -1,0 +1,16 @@
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+}

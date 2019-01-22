@@ -1,0 +1,34 @@
+// MediaQueries
+$tiny-mobile: 'screen and (max-width: 374px)';
+$mobile: 'screen and (max-width: 767px)';
+$tablet-mobile: 'screen and (max-width: 1023px)';
+$tablet-only: 'screen and (min-width: 768px) and (max-width: 1023px)';
+$tablet: 'screen and (min-width: 768px)';
+$desktop: 'screen and (min-width: 1024px)';
+$desktop-normal: 'screen and (min-width: 1280px)';
+$desktop-wide: 'screen and (min-width: 1500px)';
+$desktop-high: 'screen and (min-height: 900px)';
+
+// Transition speed
+$short-transition: 0.15s;
+$medium-transition: 0.25s;
+$long-transition: 0.35s;
+
+// Input types
+$input-types: ("[type='text']", "[type='password']", "[type='email']", "[type='tel']", "[type='number']", "[type='date']", textarea, select);
+$input-selectors: ();
+$input-focused-selectors: ();
+$input-disabled-selectors: ();
+
+@each $type in $input-types {
+  $input-selectors: append($input-selectors, $type, 'comma');
+}
+
+@each $type in $input-types {
+  $input-focused-selectors: append($input-focused-selectors, unquote('#{$type}:focus'), 'comma');
+}
+
+@each $type in $input-types {
+  $input-disabled-selectors: append($input-disabled-selectors, unquote('#{$type}:disabled'), 'comma');
+}
+
