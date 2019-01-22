@@ -1,3 +1,10 @@
 body {
-  font: normal $fz-regular/$lh-regular $font-family;
+  font-family: $font-family;
+  font-size: $fz-regular;
+  line-height: $lh-regular;
+}
+
+a, a:visited {
+  color: rgba(0, 0, 0, .5);
+  text-decoration: none;
 }
