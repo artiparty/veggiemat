@@ -1,18 +1,20 @@
 $header-height-mob: 60px;
+$header-height-desk: 110px;
 
 .header {
+  border-bottom: 1px solid $gray;
+}
+
+.header__i {
   @include row;
   position: relative;
   justify-content: space-between;
   align-items: center;
   height: $header-height-mob;
-  padding: 0 13px;
-  border-bottom: 1px solid $gray;
-  background: $background-secondary;
 }
 
 .header__logo__image {
-  width: 160px;
+  width: 164px;
 }
 
 .header__menu {
@@ -20,13 +22,14 @@ $header-height-mob: 60px;
   visibility: hidden;
   z-index: -1;
   opacity: 0;
+  background: #fff;
   transition: opacity $long-transition;
 
-  &.opened {
+  &.--opened {
     visibility: visible;
-    left: 0;
-    right: 0;
-    top: $header-height-mob;
+    left: -$section-padding-mobile;
+    right: -$section-padding-mobile;
+    top: $header-height-mob + 1;
     opacity: 1;
     z-index: 11;
     border-bottom: 1px solid $gray;
@@ -36,6 +39,7 @@ $header-height-mob: 60px;
 
 .header__menu-btn {
   position: relative;
+  left: 5px;
   width: 30px;
   height: 30px;
 
@@ -47,7 +51,7 @@ $header-height-mob: 60px;
     right: 4px;
     height: 3px;
     border-radius: 2px;
-    background: $secondary;
+    background: $primary;
     transform: rotate(0deg);
     transition: transform $short-transition;
   }
@@ -63,12 +67,12 @@ $header-height-mob: 60px;
   &__i {
     top: 13px;
 
-    .opened & {
+    .--opened & {
       background: transparent;
     }
   }
 
-  &.opened {
+  &.--opened {
     z-index: 12;
 
     &:before {
@@ -87,4 +91,52 @@ $header-height-mob: 60px;
   display: block;
   padding: 10px 0;
   color: $text;
+}
+
+@media #{$tablet} {
+  .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    align-items: normal;
+    height: $header-height-desk;
+    padding-top: 36px;
+    border: none;
+  }
+
+  .header__logo__image {
+    width: 230px;
+  }
+
+  .header__menu-btn {
+    display: none;
+  }
+
+  .header__menu {
+    @include row;
+    visibility: visible;
+    position: static;
+    z-index: 1;
+    opacity: 1;
+    background: none;
+  }
+
+  .header__menu__item {
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+
+    &.--mobile {
+      display: none;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .header__menu__item {
+    padding: 15px 48px 11px;
+  }
 }

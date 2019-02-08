@@ -1,7 +1,39 @@
-.page {
+$section-padding-mobile: 14px;
+$section-padding-tablet: 30px;
+$section-padding-desktop: 43px;
 
+.page {
+  overflow: hidden;
+  min-width: 320px;
 }
 
 .section {
-  padding: 0 14px;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $section-padding-mobile;
+  padding-right: $section-padding-mobile;
+}
+
+@media #{$tablet} {
+  .page {
+    padding-top: 160px;
+  }
+
+  .section {
+    padding-left: $section-padding-tablet;
+    padding-right: $section-padding-tablet;
+  }
+}
+
+@media #{$desktop} {
+  .section {
+    padding-left: $section-padding-desktop;
+    padding-right: $section-padding-desktop;
+  }
+}
+
+.centered {
+  justify-content: space-around;
 }

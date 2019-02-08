@@ -1,0 +1,215 @@
+// Research
+
+.research__title {
+  margin: 25px 0 31px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.research__item {
+  margin-bottom: 33px;
+}
+
+.research__item__img {
+  margin-bottom: 16px;
+}
+
+.research__item__tag {
+  width: 115px;
+}
+
+.research__item__descr {
+  font-style: italic;
+}
+
+.research__img {
+  margin-bottom: 20px;
+  margin-left: -$section-padding-mobile;
+  margin-right: -$section-padding-mobile;
+
+}
+
+.research__img__tag {
+  width: 100%;
+}
+
+@media #{$tablet} {
+  .research {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .research__title {
+    margin: 0 0 80px;
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .research__item {
+    margin-bottom: 73px;
+  }
+
+  .research__item__descr {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 30px;
+  }
+
+  .research__item__img {
+    margin-bottom: 0;
+    height: 98px;
+
+    &.--n1 {
+      padding-top: 14px;
+    }
+  }
+
+  .research__img {
+    margin: 0 0 88px;
+  }
+
+  .research__img__i {
+    @include col;
+    flex: 0 0 #{$grid-item-size * 10}#{'%'};
+  }
+}
+
+// Facts
+
+.facts {
+  padding-bottom: 14px;
+}
+
+.facts__title {
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.facts__descr {
+  margin-bottom: 30px;
+}
+
+.fact {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 48px;
+}
+
+.fact__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+}
+
+.fact__icon__tag {
+  position: relative;
+  height: auto;
+
+  &.--n1 {
+    top: 7px;
+    width: 26px;
+  }
+
+  &.--n2 {
+    top: 6px;
+    width: 31px;
+  }
+
+  &.--n3 {
+    top: 8px;
+    width: 31px;
+  }
+
+  &.--n4 {
+    top: 9px;
+    width: 29px;
+    left: 2px;
+  }
+}
+
+.fact__title {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.fact__descr {
+  margin-bottom: 6px;
+}
+
+@media #{$tablet} {
+  .facts__title {
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .facts__descr {
+    max-width: 770px;
+    margin: 0 auto 75px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .facts__list {
+    @include cols;
+  }
+
+  .fact {
+    @include col;
+    flex: 0 0 #{$grid-item-size * 6}#{'%'};
+    padding-left: 0;
+  }
+
+  .fact__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .fact__descr {
+    margin-bottom: 10px;
+  }
+
+  .fact__icon {
+    position: static;
+    height: 80px;
+  }
+
+  .fact__icon__tag {
+    &.--n1 {
+      top: 0;
+      width: 53px;
+    }
+
+    &.--n2 {
+      top: 4px;
+      left: 2px;
+      width: 58px;
+    }
+
+    &.--n3 {
+      top: 6px;
+      width: 60px;
+    }
+
+    &.--n4 {
+      top: 17px;
+      width: 58px;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .facts {
+    padding-bottom: 70px;
+  }
+
+  .fact {
+    flex: 0 0 #{$grid-item-size * 3}#{'%'};
+  }
+}

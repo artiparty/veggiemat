@@ -11,7 +11,7 @@ const getNameFromDir = (dir) => {
 };
 
 const generateHTMLPlugins = () =>
-  glob.sync('./src/**/*.html').map(dir =>
+  glob.sync('./src/views/*').map(dir =>
     new HTMLWebpackPlugin({
       filename: getNameFromDir(dir), // Output
       template: dir, // Input
@@ -50,6 +50,15 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw-loader',
+      },
+      {
+        test: /\.(pdf|gif|png|jpe?g|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
       },
     ],
   },

@@ -1,48 +1,245 @@
-(function() {
-  var exercisesSubscription = document.querySelector('.connect__main');
+import {tns} from "../../node_modules/tiny-slider/src/tiny-slider"
 
-  if (exercisesSubscription) {
-    var exercisesSubscriptionHandler = debounce(function() {
-      var bounding = exercisesSubscription.getBoundingClientRect();
-      var subscriptionSticky = document.querySelector('.js-flying-thing');
+// (function () {
+//
+//   // Sticky button
+//   const exercisesSubscription = document.querySelector('[data-footer]');
+//
+//   if (exercisesSubscription) {
+//     const exercisesSubscriptionHandler = debounce(function () {
+//       const bounding = exercisesSubscription.getBoundingClientRect();
+//       const subscriptionSticky = document.querySelector('[data-sticky-btn]');
+//
+//       if (
+//         bounding.top >= 0 &&
+//         bounding.bottom - 60 <=
+//         (window.innerHeight || document.documentElement.clientHeight)
+//       ) {
+//         subscriptionSticky.classList.remove('--active');
+//       } else {
+//         subscriptionSticky.classList.add('--active');
+//       }
+//     }, 250);
+//
+//     window.addEventListener('scroll', exercisesSubscriptionHandler);
+//   }
+//
+//   function debounce(func, wait, immediate) {
+//     let timeout;
+//
+//     return function () {
+//       const context = this;
+//       const args = arguments;
+//       const later = function () {
+//         timeout = null;
+//
+//         if (!immediate) {
+//           func.apply(context, args);
+//         }
+//       };
+//       const callNow = immediate && !timeout;
+//
+//       clearTimeout(timeout);
+//
+//       timeout = setTimeout(later, wait);
+//
+//       if (callNow) {
+//         func.apply(context, args);
+//       }
+//     };
+//   }
+// })();
 
-      if (
-        bounding.top >= 0 &&
-        bounding.bottom - 60 <=
-        (window.innerHeight || document.documentElement.clientHeight)
-      ) {
-        subscriptionSticky.classList.add('flying-thing--hidden');
+let s,
+  player,
+  state,
+  _this,
+  App;
+
+App = {
+  settings: {
+    els: {
+      $menu: document.querySelector('[data-menu]'),
+      $menuBtn: document.querySelector('[data-menu-btn]'),
+      $video: document.querySelector('[data-video]'),
+      $videoBtn: document.querySelectorAll('[data-video-btn]'),
+      $stickyBtn: document.querySelector('[data-sticky-btn]'),
+      $galleryContainer: document.querySelector('[data-gallery]')
+    },
+    state: {
+      menuIsOpened: false,
+      videoIsOpened: false
+    },
+  },
+
+  init: function init() {
+    s = this.settings;
+    _this = this;
+    state = s.state;
+    this.events.init();
+
+    if (s.els.$galleryContainer) {
+      this.gallery.init();
+    }
+
+    if (s.els.$video) {
+      this.video.init();
+    }
+  },
+
+  helpers: {
+    addClass: function addClass(element, className) {
+      if (element.classList) {
+        element.classList.add(className);
       } else {
-        subscriptionSticky.classList.remove('flying-thing--hidden');
+        element.className += ' ' + className;
       }
-    }, 250);
+    },
 
-    window.addEventListener('scroll', exercisesSubscriptionHandler);
-  }
+    removeClass: function removeClass(element, className) {
+      if (element.classList) {
+        element.classList.remove(className);
+      } else {
+        element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+    }
+  },
 
-  function debounce(func, wait, immediate) {
-    var timeout;
+  video: {
+    init: function () {
+      const YTScript = document.createElement('script');
+      YTScript.src = "https://www.youtube.com/iframe_api";
+      document.getElementsByTagName('head')[0].appendChild(YTScript);
 
-    return function() {
-      var context = this;
-      var args = arguments;
-      var later = function() {
-        timeout = null;
-
-        if (!immediate) {
-          func.apply(context, args);
+      let interval = setInterval(() => {
+        if (window.YT && window.YT.Player) {
+          this.createYouTubePlayer();
+          clearInterval(interval);
         }
-      };
-      var callNow = immediate && !timeout;
+      }, 1000);
+    },
 
-      clearTimeout(timeout);
+    createYouTubePlayer: function createYouTubePlayer() {
+      player = new YT.Player('video', {
+        videoId: 'MxfdzHl-igU',
+        height: '360',
+        width: '640',
+        playerVars: {
+          'autoplay': 1,
+          'iv_load_policy': 3,
+          'rel': 0,
+          'showinfo': 0,
+          'modestbranding': 1
+        }
+      });
+    },
 
-      timeout = setTimeout(later, wait);
+    stop: function () {
+      player.stopVideo();
+    }
+  },
 
-      if (callNow) {
-        func.apply(context, args);
+  gallery: {
+    init: function () {
+      const slider = tns({
+        container: '#gallery',
+        nav: true,
+        navContainer: "#gallery-thumbs",
+        controls: false,
+        slideBy: 'page',
+        autoHeight: true,
+        navAsThumbnails: true,
+        onInit: function () {
+          s.els.$galleryContainer.classList.add('--active')
+        }
+      });
+    }
+  },
+
+  events: {
+    init: function () {
+      this.toggleMenu();
+
+      if (s.els.$video) {
+        this.toggleVideo();
       }
-    };
-  }
-})();
+    },
 
+    toggleMenu: function () {
+      s.els.$menuBtn.addEventListener('click', function () {
+        if (state.menuIsOpened) {
+          _this.updateState({
+            menuIsOpened: false,
+          });
+        } else {
+          _this.updateState({
+            menuIsOpened: true,
+          });
+        }
+
+        _this.ui.updateUi();
+      });
+    },
+
+    toggleVideo: function () {
+      s.els.$videoBtn.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          if (state.videoIsOpened) {
+            _this.updateState({
+              videoIsOpened: false,
+            });
+
+            _this.video.stop();
+          } else {
+            _this.updateState({
+              videoIsOpened: true,
+            });
+          }
+
+          _this.ui.updateUi();
+        });
+      })
+    }
+  },
+
+  updateState: function updateState(newState) {
+    state = Object.assign(state, newState);
+  },
+
+  ui: {
+    updateUi: function updateUi() {
+      const options = [
+        {
+          stateKey: state.menuIsOpened,
+          elementKey: '$menu',
+          className: '--opened'
+        },
+        {
+          stateKey: state.menuIsOpened,
+          elementKey: '$menuBtn',
+          className: '--opened'
+        },
+        {
+          stateKey: state.videoIsOpened,
+          elementKey: '$video'
+        }
+      ];
+
+      for (let i = 0; i < options.length; i++) {
+        this.setElementUi(options[i].stateKey, s.els[options[i].elementKey], options[i].className);
+      }
+    },
+
+    setElementUi: function setElementUi(state, element) {
+      let className = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '--active';
+
+      if (state) {
+        _this.helpers.addClass(element, className);
+      } else {
+        _this.helpers.removeClass(element, className);
+      }
+    }
+  }
+};
+
+App.init();

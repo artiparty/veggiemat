@@ -4,6 +4,13 @@
   flex-wrap: wrap;
 }
 
+@mixin cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -#{$column-padding};
+}
+
 @mixin column {
   display: flex;
   flex-direction: column;
@@ -13,4 +20,8 @@
   content: '';
   display: block;
   position: absolute;
+}
+
+@mixin col {
+  padding-right: $column-padding;
 }
