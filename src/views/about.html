@@ -34,14 +34,14 @@
   <meta property="og:type" content="website">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>-->
-  <!--<script>-->
-  <!--window.dataLayer = window.dataLayer || [];-->
-  <!--function gtag(){dataLayer.push(arguments);}-->
-  <!--gtag('js', new Date());-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!--gtag('config', 'UA-127068969-1');-->
-  <!--</script>-->
+  gtag('config', 'UA-127068969-1');
+  </script>
 </head>
 <body>
 
@@ -50,17 +50,17 @@
     <div class="section">
       <div class="header__i">
         <a href="/" class="header__logo">
-          <img src="static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
+          <img src="/static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
         </a>
         <div class="header__menu-btn" data-menu-btn>
           <div class="header__menu-btn__i"></div>
         </div>
         <nav class="header__menu" data-menu>
           <a href="/" class="header__menu__item --mobile">Home</a>
-          <a href="/products.html" class="header__menu__item --mobile">Products</a>
-          <a href="/research.html" class="header__menu__item">Research</a>
-          <a href="/about.html" class="header__menu__item">About</a>
-          <a href="/contacts.html" class="header__menu__item">Contact</a>
+          <a href="/products" class="header__menu__item --mobile">Products</a>
+          <a href="/research" class="header__menu__item">Research</a>
+          <a href="/about" class="header__menu__item">About</a>
+          <a href="#" class="header__menu__item" data-messenger-btn>Contact</a>
         </nav>
       </div>
     </div>
@@ -74,8 +74,8 @@
     <div class="section">
       <div class="about__i">
         <div class="about__img">
-          <img class="about__img__tag" src="static/images/veggies.jpg"
-               srcset="static/images/veggies@2x.jpg 2x"
+          <img class="about__img__tag" src="/static/images/veggies.jpg"
+               srcset="/static/images/veggies@2x.jpg 2x"
                alt="VeggieMat™ with colorful vegetables on it">
         </div>
         <div class="about__content">
@@ -103,8 +103,8 @@
     <div class="section">
       <div class="person__i">
         <div class="person__picture">
-          <img class="person__picture__tag" src="static/images/artem.jpg"
-               srcset="static/images/artem@2x.jpg 2x"
+          <img class="person__picture__tag" src="/static/images/artem.jpg"
+               srcset="/static/images/artem@2x.jpg 2x"
                alt="VeggieMat™ with colorful vegetables on it">
         </div>
         <div class="person__descr">
@@ -117,7 +117,7 @@
             built things used by professionals at Google, Facebook, Netflix, Boeing, and others.
           </p>
         </div>
-        <div class="person__btn btn">
+        <div class="person__btn btn" data-messenger-btn>
           <svg class="person__btn__icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
             <path fill="#FFF" fill-rule="nonzero" d="M3.868 17.26C1.508 15.477 0 12.763 0 9.722 0 4.352 4.701 0 10.5 0 16.3 0 21 4.353 21 9.722c0 5.37-4.7 9.722-10.5 9.722-1.082 0-2.126-.151-3.108-.432L3.868 21v-3.74zm5.51-10.2l-5.662 5.95 5.154-2.807 2.692 2.806 5.63-5.95-5.095 2.757L9.379 7.06z"/>
           </svg>
@@ -137,10 +137,10 @@
           <p class="shop-now__descr">
             Available in&nbsp;2&nbsp;colors and&nbsp;2&nbsp;designs. $12.99&nbsp;/mat.
           </p>
-          <a href="/products.html" class="shop-now__descr__btn btn">Shop Now</a>
+          <a href="/products" class="shop-now__descr__btn btn">Shop Now</a>
         </div>
         <div class="col-6 shop-now__img">
-          <img class="shop-now__img__tag" src="static/images/veggiemat.jpg" srcset="static/images/veggiemat@2x.jpg 2x"
+          <img class="shop-now__img__tag" src="/static/images/veggiemat.jpg" srcset="/static/images/veggiemat@2x.jpg 2x"
                alt="VeggieMat™ with colorful vegetables on it">
         </div>
       </div>
@@ -156,10 +156,10 @@
         </div>
         <nav class="footer__nav">
         <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/terms.html">Terms and Conditions</a>
+          <a class="footer__nav__link" href="/terms">Terms and Conditions</a>
         </span>
           <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/contacts.html">Contact</a>
+          <a class="footer__nav__link" href="#">Contact</a>
         </span>
         </nav>
       </div>
@@ -167,5 +167,9 @@
   </footer>
 </div>
 
+<!-- Kayako messenger -->
+<script>
+  (function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://veggiemat.kayako.com/api/v1",messengerUrl:"https://veggiemat.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});
+</script>
 </body>
 </html>

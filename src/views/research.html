@@ -33,14 +33,14 @@
   <meta property="og:type" content="website">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>-->
-  <!--<script>-->
-  <!--window.dataLayer = window.dataLayer || [];-->
-  <!--function gtag(){dataLayer.push(arguments);}-->
-  <!--gtag('js', new Date());-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!--gtag('config', 'UA-127068969-1');-->
-  <!--</script>-->
+  gtag('config', 'UA-127068969-1');
+  </script>
 </head>
 <body>
 
@@ -49,17 +49,17 @@
     <div class="section">
       <div class="header__i">
         <a href="/" class="header__logo">
-          <img src="static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
+          <img src="/static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
         </a>
         <div class="header__menu-btn" data-menu-btn>
           <div class="header__menu-btn__i"></div>
         </div>
         <nav class="header__menu" data-menu>
           <a href="/" class="header__menu__item --mobile">Home</a>
-          <a href="/products.html" class="header__menu__item --mobile">Products</a>
-          <a href="/research.html" class="header__menu__item">Research</a>
-          <a href="/about.html" class="header__menu__item">About</a>
-          <a href="/contacts.html" class="header__menu__item">Contact</a>
+          <a href="/products" class="header__menu__item --mobile">Products</a>
+          <a href="/research" class="header__menu__item">Research</a>
+          <a href="/about" class="header__menu__item">About</a>
+          <a href="#" class="header__menu__item" data-messenger-btn>Contact</a>
         </nav>
       </div>
     </div>
@@ -71,7 +71,7 @@
       <div class="cols">
         <div class="col-6 research__item">
           <div class="research__item__img --n1">
-            <img class="research__item__tag" src="static/images/research/union.png" srcset="static/images/research/union@2x.png 2x" alt="Harvard">
+            <img class="research__item__tag" src="/static/images/research/union.png" srcset="/static/images/research/union@2x.png 2x" alt="Harvard">
           </div>
           <p class="research__item__descr">
             &quot;Increasing our consumption of fruits and vegetables could save more than 100,000 lives and $17 billion in health care costs from heart disease each year.&quot;
@@ -79,7 +79,7 @@
         </div>
         <div class="col-6 research__item">
           <div class="research__item__img">
-            <img class="research__item__tag" src="static/images/research/harvard.png" srcset="static/images/research/harvard@2x.png 2x" alt="Union of concerned scientists">
+            <img class="research__item__tag" src="/static/images/research/harvard.png" srcset="/static/images/research/harvard@2x.png 2x" alt="Union of concerned scientists">
           </div>
           <p class="research__item__descr">
             “A diet rich in vegetables and fruits can lower blood pressure, reduce the risk of heart disease and stroke, prevent some types of cancer, lower risk of eye and digestive problems, and have a positive effect upon blood sugar […]”
@@ -88,7 +88,7 @@
       </div>
       <div class="cols research__img centered">
         <div class="research__img__i">
-          <img class="research__img__tag" src="static/images/research/research.jpg" srcset="static/images/research/research@2x.jpg 2x" alt="Harvard">
+          <img class="research__img__tag" src="/static/images/research/research.jpg" srcset="/static/images/research/research@2x.jpg 2x" alt="Harvard">
         </div>
       </div>
     </div>
@@ -191,10 +191,10 @@
           <p class="shop-now__descr">
             Available in&nbsp;2&nbsp;colors and&nbsp;2&nbsp;designs. $12.99&nbsp;/mat.
           </p>
-          <a href="/products.html" class="shop-now__descr__btn btn">Shop Now</a>
+          <a href="/products" class="shop-now__descr__btn btn">Shop Now</a>
         </div>
         <div class="col-6 shop-now__img">
-          <img class="shop-now__img__tag" src="static/images/veggiemat.jpg" srcset="static/images/veggiemat@2x.jpg 2x" alt="VeggieMat™ with colorful vegetables on it">
+          <img class="shop-now__img__tag" src="/static/images/veggiemat.jpg" srcset="/static/images/veggiemat@2x.jpg 2x" alt="VeggieMat™ with colorful vegetables on it">
         </div>
       </div>
     </div>
@@ -209,10 +209,10 @@
         </div>
         <nav class="footer__nav">
         <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/terms.html">Terms and Conditions</a>
+          <a class="footer__nav__link" href="/terms">Terms and Conditions</a>
         </span>
           <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/contacts.html">Contact</a>
+          <a class="footer__nav__link" href="#">Contact</a>
         </span>
         </nav>
       </div>
@@ -220,5 +220,9 @@
   </footer>
 </div>
 
+<!-- Kayako messenger -->
+<script>
+  (function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://veggiemat.kayako.com/api/v1",messengerUrl:"https://veggiemat.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});
+</script>
 </body>
 </html>

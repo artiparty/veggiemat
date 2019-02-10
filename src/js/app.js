@@ -64,12 +64,15 @@ App = {
       $video: document.querySelector('[data-video]'),
       $videoBtn: document.querySelectorAll('[data-video-btn]'),
       $stickyBtn: document.querySelector('[data-sticky-btn]'),
-      $galleryContainer: document.querySelector('[data-gallery]')
+      $galleryContainer: document.querySelector('[data-gallery]'),
+      $messengerBtn: document.querySelectorAll('[data-messenger-btn]'),
     },
     state: {
       menuIsOpened: false,
       videoIsOpened: false
     },
+
+    playerIsLoaded: false
   },
 
   init: function init() {
@@ -114,6 +117,7 @@ App = {
       let interval = setInterval(() => {
         if (window.YT && window.YT.Player) {
           this.createYouTubePlayer();
+          s.playerIsLoaded = true;
           clearInterval(interval);
         }
       }, 1000);
@@ -125,13 +129,27 @@ App = {
         height: '360',
         width: '640',
         playerVars: {
-          'autoplay': 1,
+          'autoplay': 0,
           'iv_load_policy': 3,
           'rel': 0,
           'showinfo': 0,
           'modestbranding': 1
         }
       });
+    },
+
+    play: function () {
+      if (s.playerIsLoaded) {
+        player.playVideo();
+      } else {
+        let interval = setInterval(() => {
+          console.log('player is loading')
+          if (s.playerIsLoaded) {
+            player.playVideo();
+            clearInterval(interval);
+          }
+        }, 1000);
+      }
     },
 
     stop: function () {
@@ -162,6 +180,16 @@ App = {
 
       if (s.els.$video) {
         this.toggleVideo();
+      }
+
+      if (window.kayako) {
+        this.showMessenger();
+      } else {
+        let interval = setInterval(() => {
+          if (window.kayako) {
+            clearInterval(interval);
+          }
+        }, 1000);
       }
     },
 
@@ -194,9 +222,20 @@ App = {
             _this.updateState({
               videoIsOpened: true,
             });
+
+            _this.video.play();
           }
 
           _this.ui.updateUi();
+        });
+      })
+    },
+
+    showMessenger: function () {
+      s.els.$messengerBtn.forEach((btn) => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.kayako.maximize();
         });
       })
     }

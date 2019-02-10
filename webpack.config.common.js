@@ -7,14 +7,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const getNameFromDir = (dir) => {
   const lastSlash = dir.lastIndexOf('/');
-  return dir.slice(lastSlash + 1);
+  const fileName = dir.slice(lastSlash + 1).split('.')[0];
+  return fileName === 'index' ? 'index.html' : `${fileName}/index.html`;
 };
 
 const generateHTMLPlugins = () =>
-  glob.sync('./src/views/*').map(dir =>
+  glob.sync('./src/**/*.html').map(dir =>
     new HTMLWebpackPlugin({
-      filename: getNameFromDir(dir), // Output
       template: dir, // Input
+      filename: getNameFromDir(dir), // Output
     }));
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
   },
   entry: ['./src/js/app.js', './src/style/app.scss'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'app.bundle.js',
   },
   optimization: {

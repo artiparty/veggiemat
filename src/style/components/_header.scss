@@ -93,6 +93,14 @@ $header-height-desk: 110px;
   color: $text;
 }
 
+@media #{$mobile} {
+  .header {
+    &.--colored {
+      background: $background-secondary;
+    }
+  }
+}
+
 @media #{$tablet} {
   .header {
     position: absolute;

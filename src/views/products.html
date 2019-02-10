@@ -34,33 +34,307 @@
   <meta property="og:type" content="website">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>-->
-  <!--<script>-->
-  <!--window.dataLayer = window.dataLayer || [];-->
-  <!--function gtag(){dataLayer.push(arguments);}-->
-  <!--gtag('js', new Date());-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!--gtag('config', 'UA-127068969-1');-->
-  <!--</script>-->
+  gtag('config', 'UA-127068969-1');
+  </script>
 </head>
 <body>
 
 <div class="page">
+  <script type="text/javascript">
+    /*<![CDATA[*/
+
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'veggiemat.myshopify.com',
+          storefrontAccessToken: '8aadb61eb5339bcebfa1478be60924d6',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: 74280108077,
+            node: document.getElementById('collection-component-c29a8b576f9'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "variantId": "all",
+                "contents": {
+                  "imgWithCarousel": false,
+                  "variantTitle": false,
+                  "description": false,
+                  "buttonWithQuantity": false,
+                  "quantity": false
+                },
+                "text": {
+                  "button": "Add to Cart"
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "46px"
+                    },
+                    "imgWrapper": {
+                      "position": "relative",
+                      "height": "0",
+                      "padding-top": "calc(75% + 15px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#4ec41a",
+                    "padding-left": "30px",
+                    "padding-right": "30px",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "variantTitle": {
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "font-weight": "normal",
+                    "font-size": "16px",
+                    "color": "#000000"
+                  },
+                  "description": {
+                    "font-weight": "bold"
+                  },
+                  "price": {
+                    "font-size": "22px",
+                    "color": "#000000",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "18.7px",
+                    "color": "#000000"
+                  }
+                }
+              },
+              "cart": {
+                "contents": {
+                  "button": true
+                },
+                "text": {
+                  "button": "Checkout"
+                },
+                "styles": {
+                  "button": {
+                    "background-color": "#4ec41a",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "color": "#000000"
+                  },
+                  "footer": {
+                    "background-color": "#ffffff"
+                  },
+                  "header": {
+                    "color": "#000000"
+                  },
+                  "lineItems": {
+                    "color": "#000000"
+                  },
+                  "subtotalText": {
+                    "color": "#000000"
+                  },
+                  "subtotal": {
+                    "color": "#000000"
+                  },
+                  "notice": {
+                    "color": "#000000"
+                  },
+                  "currency": {
+                    "color": "#000000"
+                  },
+                  "close": {
+                    ":hover": {
+                      "color": "#000000"
+                    },
+                    "color": "#000000"
+                  },
+                  "emptyCart": {
+                    "color": "#000000"
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "variantTitle": false,
+                  "buttonWithQuantity": true,
+                  "button": false,
+                  "quantity": false
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#4ec41a",
+                    "padding-left": "30px",
+                    "padding-right": "30px",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "variantTitle": {
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "font-weight": "normal"
+                  },
+                  "description": {
+                    "font-weight": "bold"
+                  },
+                  "price": {
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold"
+                  }
+                }
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "background-color": "#4ec41a",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                }
+              },
+              "option": {
+                "styles": {
+                  "label": {
+                    "font-weight": "bold"
+                  },
+                  "select": {
+                    "font-weight": "bold"
+                  }
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "lineItem": {
+                "styles": {
+                  "variantTitle": {
+                    "color": "#000000"
+                  },
+                  "title": {
+                    "color": "#000000"
+                  },
+                  "price": {
+                    "color": "#000000"
+                  },
+                  "quantity": {
+                    "color": "#000000"
+                  },
+                  "quantityIncrement": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  },
+                  "quantityDecrement": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  },
+                  "quantityInput": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  }
+                }
+              }
+            }
+          });
+        });
+      }
+    })();
+    /*]]>*/
+  </script>
   <header class="header">
     <div class="section">
       <div class="header__i">
         <a href="/" class="header__logo">
-          <img src="static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
+          <img src="/static/images/logo.svg" alt="VeggieMat™" class="header__logo__image">
         </a>
         <div class="header__menu-btn" data-menu-btn>
           <div class="header__menu-btn__i"></div>
         </div>
         <nav class="header__menu" data-menu>
           <a href="/" class="header__menu__item --mobile">Home</a>
-          <a href="/products.html" class="header__menu__item --mobile">Products</a>
-          <a href="/research.html" class="header__menu__item">Research</a>
-          <a href="/about.html" class="header__menu__item">About</a>
-          <a href="/contacts.html" class="header__menu__item">Contact</a>
+          <a href="/products" class="header__menu__item --mobile">Products</a>
+          <a href="/research" class="header__menu__item">Research</a>
+          <a href="/about" class="header__menu__item">About</a>
+          <a href="#" class="header__menu__item" data-messenger-btn>Contact</a>
         </nav>
       </div>
     </div>
@@ -78,24 +352,24 @@
         <div class="product__gallery" data-gallery>
           <div class="gallery" id="gallery">
             <div class="gallery__item">
-              <img class="gallery__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
           </div>
           <div class="gallery__thumbs" id="gallery-thumbs">
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="static/images/rainbow-veggies.jpg" srcset="static/images/rainbow-veggies@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/rainbow-veggies.jpg" srcset="/static/images/rainbow-veggies@2x.jpg 2x" alt="">
             </div>
           </div>
         </div>
@@ -221,60 +495,22 @@
       <p class="products__delivery">
         Worldwide Shipping. US:&nbsp;$6, Rest&nbsp;of&nbsp;the&nbsp;world:&nbsp;$6-8
       </p>
-      <ul class="products__list">
-        <li class="products__item">
-          <div class="products__item__img">
-            <img class="products__item__img__tag" src="static/images/products/product-1.png"
-                 srcset="static/images/products/product-1@2x.png 2x" alt="VeggieMat™ Bicycle, Red">
-          </div>
-          <h3 class="products__item__title">
-            VeggieMat™ Bicycle, Red
-          </h3>
-          <p class="products__item__price">
-            $8.99
-          </p>
-          <div class="products__item__btn btn --disabled">Out of stock</div>
-        </li>
-        <li class="products__item">
-          <div class="products__item__img">
-            <img class="products__item__img__tag" src="static/images/products/product-2.png"
-                 srcset="static/images/products/product-2@2x.png 2x" alt="VeggieMat™ Bicycle, Red">
-          </div>
-          <h3 class="products__item__title">
-            VeggieMat™ Bicycle, Red
-          </h3>
-          <p class="products__item__price">
-            $8.99
-          </p>
-          <div class="products__item__btn btn --disabled">Out of stock</div>
-        </li>
-        <li class="products__item">
-          <div class="products__item__img">
-            <img class="products__item__img__tag" src="static/images/products/product-3.png"
-                 srcset="static/images/products/product-3@2x.png 2x" alt="VeggieMat™ Bicycle, Red">
-          </div>
-          <h3 class="products__item__title">
-            VeggieMat™ Bicycle, Red
-          </h3>
-          <p class="products__item__price">
-            $8.99
-          </p>
-          <div class="products__item__btn btn --disabled">Out of stock</div>
-        </li>
-        <li class="products__item">
-          <div class="products__item__img">
-            <img class="products__item__img__tag" src="static/images/products/product-4.png"
-                 srcset="static/images/products/product-4@2x.png 2x" alt="VeggieMat™ Bicycle, Red">
-          </div>
-          <h3 class="products__item__title">
-            VeggieMat™ Bicycle, Red
-          </h3>
-          <p class="products__item__price">
-            $8.99
-          </p>
-          <div class="products__item__btn btn --disabled">Out of stock</div>
-        </li>
-      </ul>
+      <div id='collection-component-c29a8b576f9'></div>
+      <!--<ul class="products__list">-->
+        <!--<li class="products__item">-->
+          <!--<div class="products__item__img">-->
+            <!--<img class="products__item__img__tag" src="/static/images/products/product-1.png"-->
+                 <!--srcset="/static/images/products/product-1@2x.png 2x" alt="VeggieMat™ Bicycle, Red">-->
+          <!--</div>-->
+          <!--<h3 class="products__item__title">-->
+            <!--VeggieMat™ Bicycle, Red-->
+          <!--</h3>-->
+          <!--<p class="products__item__price">-->
+            <!--$8.99-->
+          <!--</p>-->
+          <!--<div class="products__item__btn btn &#45;&#45;disabled">Out of stock</div>-->
+        <!--</li>-->
+      <!--</ul>-->
     </div>
   </div>
 
@@ -284,8 +520,8 @@
       <div class="cols">
         <div class="col-4 quality">
           <div class="quality__img">
-            <img class="quality__img__tag" src="static/images/features/feature-1.jpg"
-                 srcset="static/images/features/feature-1@2x.jpg 2x" alt="">
+            <img class="quality__img__tag" src="/static/images/features/feature-1.jpg"
+                 srcset="/static/images/features/feature-1@2x.jpg 2x" alt="">
           </div>
           <h3 class="quality__title">
             Easy To Clean
@@ -297,8 +533,8 @@
         </div>
         <div class="col-4 quality">
           <div class="quality__img">
-            <img class="quality__img__tag" src="static/images/features/feature-2.jpg"
-                 srcset="static/images/features/feature-2@2x.jpg 2x" alt="">
+            <img class="quality__img__tag" src="/static/images/features/feature-2.jpg"
+                 srcset="/static/images/features/feature-2@2x.jpg 2x" alt="">
           </div>
           <h3 class="quality__title">
             Great Table Grip
@@ -310,8 +546,8 @@
         </div>
         <div class="col-4 quality">
           <div class="quality__img">
-            <img class="quality__img__tag" src="static/images/features/feature-3.jpg"
-                 srcset="static/images/features/feature-3@2x.jpg 2x" alt="">
+            <img class="quality__img__tag" src="/static/images/features/feature-3.jpg"
+                 srcset="/static/images/features/feature-3@2x.jpg 2x" alt="">
           </div>
           <h3 class="quality__title">
             Easy to Store and Carry
@@ -323,8 +559,8 @@
         </div>
         <div class="col-4 quality --mobile">
           <div class="quality__img">
-            <img class="quality__img__tag" src="static/images/features/feature-4.jpg"
-                 srcset="static/images/features/feature-4@2x.jpg 2x" alt="">
+            <img class="quality__img__tag" src="/static/images/features/feature-4.jpg"
+                 srcset="/static/images/features/feature-4@2x.jpg 2x" alt="">
           </div>
           <h3 class="quality__title">
             Eco-Friendly Money Saver
@@ -343,8 +579,8 @@
   <div class="section save">
     <div class="save__i">
       <div class="save__img">
-        <img class="save__img__tag" src="static/images/features/feature-4.jpg"
-             srcset="static/images/features/feature-4@2x.jpg 2x" alt="">
+        <img class="save__img__tag" src="/static/images/features/feature-4.jpg"
+             srcset="/static/images/features/feature-4@2x.jpg 2x" alt="">
       </div>
       <div class="save__content">
         <h3 class="save__title">
@@ -373,8 +609,8 @@
           </p>
           <div class="testimonial__author">
             <div class="testimonial__author__image">
-              <img class="testimonial__author__image-tag" src="static/images/testimonials/annie-m.jpg"
-                   srcset="static/images/testimonials/annie-m@2x.jpg 2x" alt="Annie M., mom of a 3-year old boy">
+              <img class="testimonial__author__image-tag" src="/static/images/testimonials/annie-m.jpg"
+                   srcset="/static/images/testimonials/annie-m@2x.jpg 2x" alt="Annie M., mom of a 3-year old boy">
             </div>
             <div class="testimonial__author__i">
               <div class="testimonial__author__name">
@@ -397,8 +633,8 @@
           </p>
           <div class="testimonial__author">
             <div class="testimonial__author__image">
-              <img class="testimonial__author__image-tag" src="static/images/testimonials/sara.jpg"
-                   srcset="static/images/testimonials/sara@2x.jpg 2x" alt="Sara Planta, mom of 2.5-year old boy">
+              <img class="testimonial__author__image-tag" src="/static/images/testimonials/sara.jpg"
+                   srcset="/static/images/testimonials/sara@2x.jpg 2x" alt="Sara Planta, mom of 2.5-year old boy">
             </div>
             <div class="testimonial__author__i">
               <div class="testimonial__author__name">
@@ -422,8 +658,8 @@
           </p>
           <div class="testimonial__author">
             <div class="testimonial__author__image">
-              <img class="testimonial__author__image-tag" src="static/images/testimonials/kira.jpg"
-                   srcset="static/images/testimonials/kira@2x.jpg 2x" alt="Kira Cohen-Milo, mom of a 2.5-year old girl">
+              <img class="testimonial__author__image-tag" src="/static/images/testimonials/kira.jpg"
+                   srcset="/static/images/testimonials/kira@2x.jpg 2x" alt="Kira Cohen-Milo, mom of a 2.5-year old girl">
             </div>
             <div class="testimonial__author__i">
               <div class="testimonial__author__name">
@@ -450,10 +686,10 @@
         </div>
         <nav class="footer__nav">
         <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/terms.html">Terms and Conditions</a>
+          <a class="footer__nav__link" href="/terms">Terms and Conditions</a>
         </span>
           <span class="footer__nav__item">
-          <a class="footer__nav__link" href="/contacts.html">Contact</a>
+          <a class="footer__nav__link" href="#">Contact</a>
         </span>
         </nav>
       </div>
@@ -461,5 +697,9 @@
   </footer>
 </div>
 
+<!-- Kayako messenger -->
+<script>
+  (function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://veggiemat.kayako.com/api/v1",messengerUrl:"https://veggiemat.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});
+</script>
 </body>
 </html>
