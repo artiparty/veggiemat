@@ -1,0 +1,32 @@
+// Sticky btn
+
+.sticky {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 11px $section-padding-mobile;
+  border-top: 1px solid $gray;
+  background: #fff;
+}
+
+.sticky__btn {
+  width: 100%;
+}
+
+@media #{$tablet} {
+  .sticky {
+    display: none;
+  }
+}
+
+// Research link
+
+.research-link {
+  padding-left: 20px;
+  color: rgba(0,0,0,.5);
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: underline;
+  background: $icon-research no-repeat 0 3px;
+}

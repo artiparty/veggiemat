@@ -1,0 +1,187 @@
+.about-title {
+  padding: 30px 0 15px;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+@media #{$tablet} {
+  .about-title {
+    padding: 0 0 55px;
+    font-size: 38px;
+    line-height: 36px;
+    text-align: center;
+  }
+}
+
+.about {
+  position: relative;
+  padding-top: 36px;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $background-primary;
+    transform: skewY(-3deg);
+    transform-origin: center center;
+  }
+}
+
+.about__img {
+  margin-bottom: 20px;
+}
+
+.about__img__tag {
+  width: 100%;
+}
+
+.about__descr {
+  padding-bottom: 30px;
+  font-style: italic;
+
+  p {
+    margin-bottom: 23px;
+  }
+}
+
+@media #{$tablet} {
+  .about {
+    padding-top: 68px;
+    padding-bottom: 30px;
+
+    &:before {
+      transform: skewY(-2.2deg);
+      bottom: 40%;
+    }
+
+    &:after {
+      top: 40%;
+      transform: skewY(-1deg);
+    }
+  }
+
+  .about__i {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      bottom: -61px;
+      border-top: 30px solid $background-primary;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+  }
+
+  .about__content {
+    padding-top: 17px;
+  }
+
+  .about__descr {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media #{$desktop} {
+  .about__i {
+    @include cols;
+    align-items: center;
+
+    &:before {
+      left: 57px;
+    }
+  }
+
+  .about__img {
+    order: 1;
+    @include col;
+    flex: 0 0 #{$grid-item-size * 6}#{'%'};
+  }
+
+  .about__content {
+    order: 0;
+    flex: 0 0 #{$grid-item-size * 5}#{'%'};
+    margin-right: #{$grid-item-size}#{'%'};
+  }
+}
+
+.person {
+  padding: 20px 0 50px;
+}
+
+.person__picture {
+  width: 80px;
+  margin-bottom: 16px;
+}
+
+.person__picture__tag {
+  width: 100%;
+}
+
+.person__descr {
+  p {
+    margin-bottom: 26px;
+  }
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $primary-darker;
+    }
+  }
+}
+
+.person__btn {
+  width: 100%;
+}
+
+.person__btn__icon {
+  width: 21px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@media #{$tablet} {
+  .person__i {
+    @include row;
+    flex-wrap: nowrap;
+    padding-top: 40px;
+  }
+
+  .person__picture {
+    flex: 0 0 80px;
+    margin-right: 40px;
+  }
+
+  .person__descr {
+    flex: 0 1 auto;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .person__btn {
+    flex: 0 0 250px;
+    margin-top: 10px;
+  }
+}
+
+@media #{$desktop} {
+  .person__picture {
+    flex: 0 0 150px;
+    margin: 0 40px 0 10px;
+  }
+
+  .person__descr {
+    padding-right: 100px;
+  }
+}

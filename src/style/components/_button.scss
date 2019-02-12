@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  height: 52px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 52px;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+  color: $inverted-text;
+  background: $primary;
+  transition: background-color $short-transition;
+  cursor: pointer;
+
+  &:hover {
+    color: $inverted-text;
+    background-color: $primary-darker;
+  }
+
+  &.--disabled {
+    background: rgba(0,0,0,.2);
+    cursor: default;
+
+    &:hover {
+      background: rgba(0,0,0,.2);
+    }
+  }
+}

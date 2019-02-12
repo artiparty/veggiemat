@@ -1,0 +1,150 @@
+$header-height-mob: 60px;
+$header-height-desk: 110px;
+
+.header {
+  border-bottom: 1px solid $gray;
+}
+
+.header__i {
+  @include row;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-height-mob;
+}
+
+.header__logo__image {
+  width: 164px;
+}
+
+.header__menu {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  background: #fff;
+  transition: opacity $long-transition;
+
+  &.--opened {
+    visibility: visible;
+    left: -$section-padding-mobile;
+    right: -$section-padding-mobile;
+    top: $header-height-mob + 1;
+    opacity: 1;
+    z-index: 11;
+    border-bottom: 1px solid $gray;
+    padding: 11px 12px 18px;
+  }
+}
+
+.header__menu-btn {
+  position: relative;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+
+  &:before, &:after, &__i {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5px;
+    right: 4px;
+    height: 3px;
+    border-radius: 2px;
+    background: $primary;
+    transform: rotate(0deg);
+    transition: transform $short-transition;
+  }
+
+  &:before {
+    top: 5px;
+  }
+
+  &:after {
+    bottom: 6px;
+  }
+
+  &__i {
+    top: 13px;
+
+    .--opened & {
+      background: transparent;
+    }
+  }
+
+  &.--opened {
+    z-index: 12;
+
+    &:before {
+      top: 12px;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      bottom: 15px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.header__menu__item {
+  display: block;
+  padding: 10px 0;
+  color: $text;
+}
+
+@media #{$mobile} {
+  .header {
+    &.--colored {
+      background: $background-secondary;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    align-items: normal;
+    height: $header-height-desk;
+    padding-top: 36px;
+    border: none;
+  }
+
+  .header__logo__image {
+    width: 230px;
+  }
+
+  .header__menu-btn {
+    display: none;
+  }
+
+  .header__menu {
+    @include row;
+    visibility: visible;
+    position: static;
+    z-index: 1;
+    opacity: 1;
+    background: none;
+  }
+
+  .header__menu__item {
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+
+    &.--mobile {
+      display: none;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .header__menu__item {
+    padding: 15px 48px 11px;
+  }
+}

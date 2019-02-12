@@ -1,0 +1,29 @@
+$grid-item-size: 100 / 12;
+$column-padding: 23px;
+
+.cols {
+  @include row;
+  margin-right: -#{$column-padding};
+}
+
+[class*="col-"], .col {
+  padding-right: $column-padding;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 #{$grid-item-size * $i}#{'%'};
+  }
+}
+
+@media #{$mobile} {
+  @for $i from 1 through 4 {
+    .col-#{$i} {
+      flex: 0 0 #{$grid-item-size * $i * 3}#{'%'};
+    }
+  }
+
+  .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    flex: 0 0 100%;
+  }
+}
