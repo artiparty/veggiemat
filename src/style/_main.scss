@@ -240,7 +240,6 @@
     width: 240px;
     font-size: 24px;
     line-height: 32px;
-    font-weight: 500;
     font-style: italic;
     text-align: center;
     color: $primary;
@@ -414,10 +413,6 @@
     }
   }
 
-  .testimonial {
-    margin-bottom: 40px;
-  }
-
   .testimonials__title {
     margin-bottom: 60px;
     font-size: 30px;
@@ -435,6 +430,7 @@
   }
 
   .testimonial {
+    @include column;
     flex: 0 0 #{$grid-item-size * 4}#{'%'};
   }
 
@@ -452,6 +448,7 @@
 
   .testimonial__author {
     align-items: center;
+    margin-top: auto;
   }
 
   .testimonial__author__i {

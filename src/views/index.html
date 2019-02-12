@@ -7,7 +7,8 @@
   <title>VeggieMat™ — Make eating vegetables fun for kids</title>
   <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,600" rel="stylesheet">
+  <!-- Font -->
+  <link rel="stylesheet" href="https://use.typekit.net/zeu6lid.css">
 
   <!-- Search Engine -->
   <meta name="description" content="Help your kids to explore the healthy habit of eating vegetables. VeggieMat is an interactive placemat that creates a fun activity that makes vegetables more fun.">
@@ -186,7 +187,7 @@
             “With VeggieMat™, he is eating lettuce and raw carrots, which he always refused before.
           </p>
           <p class="testimonial__descr">
-            He keeps saying, ˜I do like salad!” So, definitely a progress! Not bad for a first attempt. He just ate the
+            He keeps saying, “I do like salad!” So, definitely a progress! Not bad for a first attempt. He just ate the
             pepper and said “Mmm!” the whole time.”
           </p>
           <div class="testimonial__author">
@@ -249,6 +250,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="cols">
+
       </div>
     </div>
   </div>
@@ -358,7 +362,7 @@
           <a class="footer__nav__link" href="/terms">Terms and Conditions</a>
         </span>
           <span class="footer__nav__item">
-          <a class="footer__nav__link" href="#">Contact</a>
+          <a class="footer__nav__link" href="#" data-messenger-btn>Contact</a>
         </span>
         </nav>
       </div>
@@ -385,6 +389,12 @@
 <!-- Kayako messenger -->
 <script>
   (function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://veggiemat.kayako.com/api/v1",messengerUrl:"https://veggiemat.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});
+
+  if (/Android/i.test(navigator.userAgent) || /iPhone|iPad|iPod/i.test(navigator.userAgent) || /IEMobile/i.test(navigator.userAgent)) {
+    kayako.config = {
+      hideLauncher: true
+    };
+  }
 </script>
 </body>
 </html>
