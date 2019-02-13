@@ -136,14 +136,16 @@ $header-height-desk: 110px;
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
-
-    &.--mobile {
-      display: none;
-    }
   }
 }
 
 @media #{$desktop} {
+  .header__menu__item {
+    padding-bottom: 11px;
+  }
+}
+
+@media #{$desktop-normal} {
   .header__menu__item {
     padding: 15px 48px 11px;
   }
