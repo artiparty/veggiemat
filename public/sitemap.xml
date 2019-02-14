@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://veggiemat.club/</loc>
-  <lastmod>2018-10-26T14:55:38+00:00</lastmod>
+  <lastmod>2019-02-14T16:07:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://veggiemat.club/products</loc>
+  <lastmod>2019-02-14T16:07:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://veggiemat.club/research</loc>
+  <lastmod>2019-02-14T16:07:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://veggiemat.club/about</loc>
+  <lastmod>2019-02-14T16:07:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://veggiemat.club/terms</loc>
+  <lastmod>2019-02-14T16:07:07+00:00</lastmod>
+  <priority>0.60</priority>
 </url>
 
 
