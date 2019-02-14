@@ -73,6 +73,9 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: './src/static/',
       to: './static/',
+    },{
+      from: './public/',
+      to: './',
     }]),
     ...generateHTMLPlugins(),
   ],
