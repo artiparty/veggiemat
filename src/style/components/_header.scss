@@ -132,16 +132,20 @@ $header-height-desk: 110px;
   }
 
   .header__menu__item {
-    padding: 15px 25px;
+    padding: 15px 0 15px 40px;
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
+
+    &.--mobile {
+      display: none;
+    }
   }
 }
 
 @media #{$desktop} {
   .header__menu__item {
-    padding-bottom: 11px;
+    padding: 15px 30px 11px;
   }
 }
 
