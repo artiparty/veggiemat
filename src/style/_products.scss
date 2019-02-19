@@ -479,3 +479,60 @@
     margin: 0 #{$grid-item-size}#{'%'};
   }
 }
+
+// FAQ
+
+.faq {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.faq__title {
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.faq__item {
+  margin-bottom: 25px;
+}
+
+.faq__item__title {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+}
+
+@media #{$tablet} {
+  .faq {
+    padding-top: 105px;
+  }
+
+  .faq__title {
+    margin-bottom: 35px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .faq__i {
+    @include row;
+  }
+
+  .faq__list {
+    flex: 0 0 #{$grid-item-size * 5}#{'%'};
+    margin-right: #{$grid-item-size}#{'%'};
+  }
+
+  .faq__item__title {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .faq__item__descr {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

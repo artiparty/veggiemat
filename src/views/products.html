@@ -37,17 +37,21 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068969-1"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-127068969-1');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127068969-1');
   </script>
 </head>
 <body>
 
 <div class="page">
-    <script type="text/javascript">
+  <script type="text/javascript">
     /*<![CDATA[*/
 
     (function () {
@@ -82,245 +86,245 @@
             node: document.getElementById('collection-component-d274a755d43'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
-  "product": {
-    "variantId": "all",
-    "contents": {
-      "imgWithCarousel": false,
-      "variantTitle": false,
-      "description": false,
-      "buttonWithQuantity": false,
-      "quantity": false
-    },
-    "text": {
-      "button": "Add to Cart"
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        },
-        "imgWrapper": {
-          "position": "relative",
-          "height": "0",
-          "padding-top": "calc(75% + 15px)"
-        },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
-        }
-      },
-      "button": {
-        "background-color": "#4ec41a",
-        "padding-left": "30px",
-        "padding-right": "30px",
-        ":hover": {
-          "background-color": "#46b017"
-        },
-        ":focus": {
-          "background-color": "#46b017"
-        },
-        "font-weight": "bold"
-      },
-      "variantTitle": {
-        "font-weight": "bold"
-      },
-      "title": {
-        "font-weight": "normal",
-        "font-size": "16px",
-        "color": "#000000"
-      },
-      "description": {
-        "font-weight": "bold"
-      },
-      "price": {
-        "font-size": "22px",
-        "color": "#000000",
-        "font-weight": "bold"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "18.7px",
-        "color": "#000000"
-      }
-    }
-  },
-  "cart": {
-    "contents": {
-      "button": true
-    },
-    "text": {
-      "button": "Checkout"
-    },
-    "styles": {
-      "button": {
-        "background-color": "#4ec41a",
-        ":hover": {
-          "background-color": "#46b017"
-        },
-        ":focus": {
-          "background-color": "#46b017"
-        },
-        "font-weight": "bold"
-      },
-      "title": {
-        "color": "#000000"
-      },
-      "footer": {
-        "background-color": "#ffffff"
-      },
-      "header": {
-        "color": "#000000"
-      },
-      "lineItems": {
-        "color": "#000000"
-      },
-      "subtotalText": {
-        "color": "#000000"
-      },
-      "subtotal": {
-        "color": "#000000"
-      },
-      "notice": {
-        "color": "#000000"
-      },
-      "currency": {
-        "color": "#000000"
-      },
-      "close": {
-        ":hover": {
-          "color": "#000000"
-        },
-        "color": "#000000"
-      },
-      "emptyCart": {
-        "color": "#000000"
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "variantTitle": false,
-      "buttonWithQuantity": true,
-      "button": false,
-      "quantity": false
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "background-color": "#4ec41a",
-        "padding-left": "30px",
-        "padding-right": "30px",
-        ":hover": {
-          "background-color": "#46b017"
-        },
-        ":focus": {
-          "background-color": "#46b017"
-        },
-        "font-weight": "bold"
-      },
-      "variantTitle": {
-        "font-weight": "bold"
-      },
-      "title": {
-        "font-weight": "normal"
-      },
-      "description": {
-        "font-weight": "bold"
-      },
-      "price": {
-        "font-weight": "bold"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold"
-      }
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "background-color": "#4ec41a",
-        ":hover": {
-          "background-color": "#46b017"
-        },
-        ":focus": {
-          "background-color": "#46b017"
-        },
-        "font-weight": "bold"
-      },
-      "count": {
-        "font-size": "16px"
-      }
-    }
-  },
-  "option": {
-    "styles": {
-      "label": {
-        "font-weight": "bold"
-      },
-      "select": {
-        "font-weight": "bold"
-      }
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "lineItem": {
-    "styles": {
-      "variantTitle": {
-        "color": "#000000"
-      },
-      "title": {
-        "color": "#000000"
-      },
-      "price": {
-        "color": "#000000"
-      },
-      "quantity": {
-        "color": "#000000"
-      },
-      "quantityIncrement": {
-        "color": "#000000",
-        "border-color": "#000000"
-      },
-      "quantityDecrement": {
-        "color": "#000000",
-        "border-color": "#000000"
-      },
-      "quantityInput": {
-        "color": "#000000",
-        "border-color": "#000000"
-      }
-    }
-  }
-}
+              "product": {
+                "variantId": "all",
+                "contents": {
+                  "imgWithCarousel": false,
+                  "variantTitle": false,
+                  "description": false,
+                  "buttonWithQuantity": false,
+                  "quantity": false
+                },
+                "text": {
+                  "button": "Add to Cart"
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px"
+                    },
+                    "imgWrapper": {
+                      "position": "relative",
+                      "height": "0",
+                      "padding-top": "calc(75% + 15px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#4ec41a",
+                    "padding-left": "30px",
+                    "padding-right": "30px",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "variantTitle": {
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "font-weight": "normal",
+                    "font-size": "16px",
+                    "color": "#000000"
+                  },
+                  "description": {
+                    "font-weight": "bold"
+                  },
+                  "price": {
+                    "font-size": "22px",
+                    "color": "#000000",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "18.7px",
+                    "color": "#000000"
+                  }
+                }
+              },
+              "cart": {
+                "contents": {
+                  "button": true
+                },
+                "text": {
+                  "button": "Checkout"
+                },
+                "styles": {
+                  "button": {
+                    "background-color": "#4ec41a",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "color": "#000000"
+                  },
+                  "footer": {
+                    "background-color": "#ffffff"
+                  },
+                  "header": {
+                    "color": "#000000"
+                  },
+                  "lineItems": {
+                    "color": "#000000"
+                  },
+                  "subtotalText": {
+                    "color": "#000000"
+                  },
+                  "subtotal": {
+                    "color": "#000000"
+                  },
+                  "notice": {
+                    "color": "#000000"
+                  },
+                  "currency": {
+                    "color": "#000000"
+                  },
+                  "close": {
+                    ":hover": {
+                      "color": "#000000"
+                    },
+                    "color": "#000000"
+                  },
+                  "emptyCart": {
+                    "color": "#000000"
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "variantTitle": false,
+                  "buttonWithQuantity": true,
+                  "button": false,
+                  "quantity": false
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#4ec41a",
+                    "padding-left": "30px",
+                    "padding-right": "30px",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "variantTitle": {
+                    "font-weight": "bold"
+                  },
+                  "title": {
+                    "font-weight": "normal"
+                  },
+                  "description": {
+                    "font-weight": "bold"
+                  },
+                  "price": {
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold"
+                  }
+                }
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "background-color": "#4ec41a",
+                    ":hover": {
+                      "background-color": "#46b017"
+                    },
+                    ":focus": {
+                      "background-color": "#46b017"
+                    },
+                    "font-weight": "bold"
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                }
+              },
+              "option": {
+                "styles": {
+                  "label": {
+                    "font-weight": "bold"
+                  },
+                  "select": {
+                    "font-weight": "bold"
+                  }
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "lineItem": {
+                "styles": {
+                  "variantTitle": {
+                    "color": "#000000"
+                  },
+                  "title": {
+                    "color": "#000000"
+                  },
+                  "price": {
+                    "color": "#000000"
+                  },
+                  "quantity": {
+                    "color": "#000000"
+                  },
+                  "quantityIncrement": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  },
+                  "quantityDecrement": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  },
+                  "quantityInput": {
+                    "color": "#000000",
+                    "border-color": "#000000"
+                  }
+                }
+              }
+            }
           });
         });
       }
     })();
     /*]]>*/
-    </script>
+  </script>
   <header class="header">
     <div class="section">
       <div class="header__i">
@@ -353,54 +357,70 @@
         <div class="product__gallery" data-gallery>
           <div class="gallery" id="gallery">
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/VeggieMat-vegetables-placemat.jpg" srcset="/static/images/VeggieMat-vegetables-placemat@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/VeggieMat-vegetables-placemat.jpg"
+                   srcset="/static/images/VeggieMat-vegetables-placemat@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/1-VeggieMat-Rainbow.jpg" srcset="/static/images/1-VeggieMat-Rainbow@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/1-VeggieMat-Rainbow.jpg"
+                   srcset="/static/images/1-VeggieMat-Rainbow@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/VeggieMat-healthy-eating.jpg" srcset="/static/images/VeggieMat-healthy-eating@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/VeggieMat-healthy-eating.jpg"
+                   srcset="/static/images/VeggieMat-healthy-eating@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/VeggieMat-interactive-placemat.jpg" srcset="/static/images/VeggieMat-interactive-placemat@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/VeggieMat-interactive-placemat.jpg"
+                   srcset="/static/images/VeggieMat-interactive-placemat@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/veggies-rainbow-placemat.jpg" srcset="/static/images/veggies-rainbow-placemat@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/veggies-rainbow-placemat.jpg"
+                   srcset="/static/images/veggies-rainbow-placemat@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/VeggieMat—vegetables-for-kids.jpg" srcset="/static/images/VeggieMat—vegetables-for-kids@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/VeggieMat—vegetables-for-kids.jpg"
+                   srcset="/static/images/VeggieMat—vegetables-for-kids@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/VeggieMat-bike-blue.jpg" srcset="/static/images/VeggieMat-bike-blue@2x.jpg 2x" alt="">
+              <img class="gallery__item__img" src="/static/images/VeggieMat-bike-blue.jpg"
+                   srcset="/static/images/VeggieMat-bike-blue@2x.jpg 2x" alt="">
             </div>
-           <div class="gallery__item">
-              <img class="gallery__item__img" src="/static/images/vegetables-rainbow-red.jpg" srcset="/static/images/vegetables-rainbow-red@2x.jpg 2x" alt="">
+            <div class="gallery__item">
+              <img class="gallery__item__img" src="/static/images/vegetables-rainbow-red.jpg"
+                   srcset="/static/images/vegetables-rainbow-red@2x.jpg 2x" alt="">
             </div>
           </div>
           <div class="gallery__thumbs" id="gallery-thumbs">
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-vegetables-placemat.jpg" srcset="/static/images/VeggieMat-vegetables-placemat@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-vegetables-placemat.jpg"
+                   srcset="/static/images/VeggieMat-vegetables-placemat@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/1-VeggieMat-Rainbow.jpg" srcset="/static/images/1-VeggieMat-Rainbow@2x.jpg 2x" alt="">
-            </div>
-             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-healthy-eating.jpg" srcset="/static/images/VeggieMat-healthy-eating@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/1-VeggieMat-Rainbow.jpg"
+                   srcset="/static/images/1-VeggieMat-Rainbow@2x.jpg 2x" alt="">
             </div>
             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-interactive-placemat.jpg" srcset="/static/images/VeggieMat-interactive-placemat@2x.jpg 2x" alt="">
+              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-healthy-eating.jpg"
+                   srcset="/static/images/VeggieMat-healthy-eating@2x.jpg 2x" alt="">
             </div>
-             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/veggies-rainbow-placemat.jpg" srcset="/static/images/veggies-rainbow-placemat@2x.jpg 2x" alt="">
+            <div class="gallery__thumbs__item">
+              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-interactive-placemat.jpg"
+                   srcset="/static/images/VeggieMat-interactive-placemat@2x.jpg 2x" alt="">
             </div>
-             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat—vegetables-for-kids.jpg" srcset="/static/images/VeggieMat—vegetables-for-kids@2x.jpg 2x" alt="">
+            <div class="gallery__thumbs__item">
+              <img class="gallery__thumbs__item__img" src="/static/images/veggies-rainbow-placemat.jpg"
+                   srcset="/static/images/veggies-rainbow-placemat@2x.jpg 2x" alt="">
             </div>
-             <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-bike-blue.jpg" srcset="/static/images/VeggieMat-bike-blue@2x.jpg 2x" alt="">
+            <div class="gallery__thumbs__item">
+              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat—vegetables-for-kids.jpg"
+                   srcset="/static/images/VeggieMat—vegetables-for-kids@2x.jpg 2x" alt="">
             </div>
-           <div class="gallery__thumbs__item">
-              <img class="gallery__thumbs__item__img" src="/static/images/vegetables-rainbow-red.jpg" srcset="/static/images/vegetables-rainbow-red@2x.jpg 2x" alt="">
+            <div class="gallery__thumbs__item">
+              <img class="gallery__thumbs__item__img" src="/static/images/VeggieMat-bike-blue.jpg"
+                   srcset="/static/images/VeggieMat-bike-blue@2x.jpg 2x" alt="">
+            </div>
+            <div class="gallery__thumbs__item">
+              <img class="gallery__thumbs__item__img" src="/static/images/vegetables-rainbow-red.jpg"
+                   srcset="/static/images/vegetables-rainbow-red@2x.jpg 2x" alt="">
             </div>
           </div>
         </div>
@@ -528,19 +548,19 @@
       </p>
       <div id='collection-component-d274a755d43'></div>
       <!--<ul class="products__list">-->
-        <!--<li class="products__item">-->
-          <!--<div class="products__item__img">-->
-            <!--<img class="products__item__img__tag" src="/static/images/products/product-1.png"-->
-                 <!--srcset="/static/images/products/product-1@2x.png 2x" alt="VeggieMat™ Bicycle, Red">-->
-          <!--</div>-->
-          <!--<h3 class="products__item__title">-->
-            <!--VeggieMat™ Bicycle, Red-->
-          <!--</h3>-->
-          <!--<p class="products__item__price">-->
-            <!--$8.99-->
-          <!--</p>-->
-          <!--<div class="products__item__btn btn &#45;&#45;disabled">Out of stock</div>-->
-        <!--</li>-->
+      <!--<li class="products__item">-->
+      <!--<div class="products__item__img">-->
+      <!--<img class="products__item__img__tag" src="/static/images/products/product-1.png"-->
+      <!--srcset="/static/images/products/product-1@2x.png 2x" alt="VeggieMat™ Bicycle, Red">-->
+      <!--</div>-->
+      <!--<h3 class="products__item__title">-->
+      <!--VeggieMat™ Bicycle, Red-->
+      <!--</h3>-->
+      <!--<p class="products__item__price">-->
+      <!--$8.99-->
+      <!--</p>-->
+      <!--<div class="products__item__btn btn &#45;&#45;disabled">Out of stock</div>-->
+      <!--</li>-->
       <!--</ul>-->
     </div>
   </div>
@@ -688,7 +708,8 @@
           <div class="testimonial__author">
             <div class="testimonial__author__image">
               <img class="testimonial__author__image-tag" src="/static/images/testimonials/kira.jpg"
-                   srcset="/static/images/testimonials/kira@2x.jpg 2x" alt="Kira Cohen-Milo, mom of a 2.5-year old girl">
+                   srcset="/static/images/testimonials/kira@2x.jpg 2x"
+                   alt="Kira Cohen-Milo, mom of a 2.5-year old girl">
             </div>
             <div class="testimonial__author__i">
               <div class="testimonial__author__name">
@@ -703,6 +724,58 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="faq section">
+    <h2 class="faq__title">FAQs</h2>
+    <div class="faq__i">
+      <ul class="faq__list">
+        <li class="faq__item">
+          <h3 class="faq__item__title">
+            Do you ship internationally?
+          </h3>
+          <p class="faq__item__descr">
+            Yes, we ship worldwide from Berlin, Germany with DHL. We make sure to avoid unnecessary packaging.
+          </p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__item__title">
+            How long does the shipping takes?
+          </h3>
+          <p class="faq__item__descr">
+            We dispatch orders within 1-3 days after order was placed. Please allow 8-15 days for orders to arrive to the
+            US, 4-10 to Europe and 10-20 days to the rest of the world.
+          </p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__item__title">
+            What are the shipping costs?
+          </h3>
+          <p class="faq__item__descr">
+            We’re charing a flat fee of $5 for shipping worldwide.
+          </p>
+        </li>
+      </ul>
+      <ul class="faq__list">
+        <li class="faq__item">
+          <h3 class="faq__item__title">
+            What if I don’t like the product?
+          </h3>
+          <p class="faq__item__descr">
+            In case you’re unsatisfied with the product let us know via artiom@veggiemat.club within 30 days of purchase
+            and we’ll issue a full refund.
+          </p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__item__title">
+            What payment methods do you have?
+          </h3>
+          <p class="faq__item__descr">
+            We currently allow to via PayPal, credit cards are coming soon.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -728,7 +801,30 @@
 
 <!-- Kayako messenger -->
 <script>
-  (function(d,a){function c(){var b=d.createElement("script");b.async=!0;b.type="text/javascript";b.src=a._settings.messengerUrl;b.crossOrigin="anonymous";var c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.kayako=a;a.readyQueue=[];a.newEmbedCode=!0;a.ready=function(b){a.readyQueue.push(b)};a._settings={apiUrl:"https://veggiemat.kayako.com/api/v1",messengerUrl:"https://veggiemat.kayakocdn.com/messenger",realtimeUrl:"wss://kre.kayako.net/socket"};window.attachEvent?window.attachEvent("onload",c):window.addEventListener("load",c,!1)})(document,window.kayako||{});
+  (function (d, a) {
+    function c() {
+      var b = d.createElement("script");
+      b.async = !0;
+      b.type = "text/javascript";
+      b.src = a._settings.messengerUrl;
+      b.crossOrigin = "anonymous";
+      var c = d.getElementsByTagName("script")[0];
+      c.parentNode.insertBefore(b, c)
+    }
+
+    window.kayako = a;
+    a.readyQueue = [];
+    a.newEmbedCode = !0;
+    a.ready = function (b) {
+      a.readyQueue.push(b)
+    };
+    a._settings = {
+      apiUrl: "https://veggiemat.kayako.com/api/v1",
+      messengerUrl: "https://veggiemat.kayakocdn.com/messenger",
+      realtimeUrl: "wss://kre.kayako.net/socket"
+    };
+    window.attachEvent ? window.attachEvent("onload", c) : window.addEventListener("load", c, !1)
+  })(document, window.kayako || {});
 </script>
 </body>
 </html>
