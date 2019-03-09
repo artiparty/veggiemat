@@ -1,55 +1,5 @@
 import {tns} from "../../node_modules/tiny-slider/src/tiny-slider"
 
-// (function () {
-//
-//   // Sticky button
-//   const exercisesSubscription = document.querySelector('[data-footer]');
-//
-//   if (exercisesSubscription) {
-//     const exercisesSubscriptionHandler = debounce(function () {
-//       const bounding = exercisesSubscription.getBoundingClientRect();
-//       const subscriptionSticky = document.querySelector('[data-sticky-btn]');
-//
-//       if (
-//         bounding.top >= 0 &&
-//         bounding.bottom - 60 <=
-//         (window.innerHeight || document.documentElement.clientHeight)
-//       ) {
-//         subscriptionSticky.classList.remove('--active');
-//       } else {
-//         subscriptionSticky.classList.add('--active');
-//       }
-//     }, 250);
-//
-//     window.addEventListener('scroll', exercisesSubscriptionHandler);
-//   }
-//
-//   function debounce(func, wait, immediate) {
-//     let timeout;
-//
-//     return function () {
-//       const context = this;
-//       const args = arguments;
-//       const later = function () {
-//         timeout = null;
-//
-//         if (!immediate) {
-//           func.apply(context, args);
-//         }
-//       };
-//       const callNow = immediate && !timeout;
-//
-//       clearTimeout(timeout);
-//
-//       timeout = setTimeout(later, wait);
-//
-//       if (callNow) {
-//         func.apply(context, args);
-//       }
-//     };
-//   }
-// })();
-
 let s,
   player,
   state,
