@@ -9,7 +9,7 @@
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:html": "pa11y-ci ./src/**/*.html",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js",
-    "start": "webpack --config webpack.config.prod.js && http-server ./dist -o"
+    "start": "webpack --config webpack.config.prod.js && http-server ./build -o"
   },
   "repository": {
     "type": "git",

@@ -14,8 +14,7 @@ App = {
       $video: document.querySelector('[data-video]'),
       $videoBtn: document.querySelectorAll('[data-video-btn]'),
       $stickyBtn: document.querySelector('[data-sticky-btn]'),
-      $galleryContainer: document.querySelector('[data-gallery]'),
-      $messengerBtn: document.querySelectorAll('[data-messenger-btn]'),
+      $galleryContainer: document.querySelector('[data-gallery]')
     },
     state: {
       menuIsOpened: false,
@@ -177,15 +176,6 @@ App = {
           }
 
           _this.ui.updateUi();
-        });
-      })
-    },
-
-    showMessenger: function () {
-      s.els.$messengerBtn.forEach((btn) => {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          window.kayako.maximize();
         });
       })
     }

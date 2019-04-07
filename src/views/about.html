@@ -61,7 +61,7 @@
           <a href="/" class="header__menu__item --mobile">Home</a>
           <a href="/research" class="header__menu__item">Research</a>
           <a href="/about" class="header__menu__item">About</a>
-          <!--<a href="#" class="drift-open-chat">Contact</a>-->
+          <a href="#" class="drift-open-chat header__menu__item">Contact</a>
         </nav>
       </div>
     </div>
@@ -118,7 +118,7 @@
             built things used by professionals at Google, Facebook, Netflix, Boeing, and others.
           </p>
         </div>
-        <div class="person__btn btn" data-messenger-btn>
+        <div class="person__btn btn drift-open-chat">
           <svg class="person__btn__icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
             <path fill="#FFF" fill-rule="nonzero" d="M3.868 17.26C1.508 15.477 0 12.763 0 9.722 0 4.352 4.701 0 10.5 0 16.3 0 21 4.353 21 9.722c0 5.37-4.7 9.722-10.5 9.722-1.082 0-2.126-.151-3.108-.432L3.868 21v-3.74zm5.51-10.2l-5.662 5.95 5.154-2.807 2.692 2.806 5.63-5.95-5.095 2.757L9.379 7.06z"/>
           </svg>
@@ -160,7 +160,7 @@
           <a class="footer__nav__link" href="/terms">Terms and Conditions</a>
         </span>
           <span class="footer__nav__item">
-          <a class="footer__nav__link" href="#" data-messenger-btn>Contact</a>
+          <a class="footer__nav__link drift-open-chat" href="#">Contact</a>
         </span>
         </nav>
       </div>
@@ -176,7 +176,7 @@
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
     t.factory = function(e) {
       return function() {
         var n = Array.prototype.slice.call(arguments);
@@ -198,15 +198,6 @@ drift.load('5veeaw7xp9fg');
 <!-- End of Async Drift Code -->
 <script>
   (function() {
-    /* Add this class to any elements you want to use to open Drift.
-     *
-     * Examples:
-     * - <a class="drift-open-chat">Questions? We're here to help!</a>
-     * - <button class="drift-open-chat">Chat now!</button>
-     *
-     * You can have any additional classes on those elements that you
-     * would ilke.
-     */
     var DRIFT_CHAT_SELECTOR = '.drift-open-chat'
     /* http://youmightnotneedjquery.com/#ready */
     function ready(fn) {
