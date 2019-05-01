@@ -823,3 +823,47 @@
     top: 15px;
   }
 }
+
+.social-media {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.social-media__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.social-media__item {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.instagram-media {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+@media #{$tablet} {
+  .social-media {
+    @include row;
+    flex-wrap: nowrap;
+    padding-right: 20px;
+    margin-right: -20px;
+    margin-bottom: 80px;
+  }
+
+  .social-media__item {
+    flex: 1 0 33%;
+    margin-right: 20px;
+  }
+
+  .social-media__title {
+    margin-bottom: 70px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+}
