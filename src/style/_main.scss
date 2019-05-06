@@ -846,13 +846,36 @@
   min-width: 100% !important;
 }
 
+.social-media__btn {
+  text-align: center;
+
+  .btn {
+    height: 52px;
+    padding-left: 36px;
+    padding-right: 36px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 52px;
+  }
+
+  svg {
+    position: relative;
+    top: -1px;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    fill: #fff;
+    vertical-align: middle;
+  }
+}
+
 @media #{$tablet} {
   .social-media {
     @include row;
     flex-wrap: nowrap;
     padding-right: 20px;
     margin-right: -20px;
-    margin-bottom: 80px;
+    margin-bottom: 24px;
   }
 
   .social-media__item {
@@ -861,9 +884,13 @@
   }
 
   .social-media__title {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
+  }
+
+  .social-media__btn {
+    margin-bottom: 72px;
   }
 }
